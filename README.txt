@@ -16,9 +16,9 @@ This implementation is focused on an event pattern to regulate communication bet
 
 Regarding future updates:
 
-*The app atm is monolithic and single threaded. This is not an issue with the log subscriber but IRC can be a bit of a bottleneck. Ideally I would at least break it into multiple threads and add synchronization to the Event Manager
+*The app atm is monolithic and single threaded (mostly). This is not an issue with the log subscriber but IRC can be a bit of a bottleneck. Ideally I would at least break it into multiple threads and add synchronization to the Event Manager
 
-*I am not a fan of the default way flask handles routes, I would prefer using something like flask-classy and exposing methods as routes. However in this limited example id didnt seem needed
+*I am not a fan of the default way flask handles routes, I would prefer using something like flask-classy and exposing methods as routes. However in this limited example it didnt seem needed
 
 *Naturally a proper frontend
 
