@@ -13,7 +13,7 @@ class UserUpdateEventType(EventType):
     """User update event that adds new UI debug line"""
     
     class UserUpateData:
-    """Data contained in event"""    
+        """Data contained in event"""    
     #NOTE: since the subscribers should not really be aware that there is an event pattern, this would be better situated with them
         
         def __init__(self, uu_type, uu_text):

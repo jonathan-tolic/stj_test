@@ -36,7 +36,7 @@ def request():
 #NOTE: would prefer using class based routes e.g. flask-classy, but this will do for now. Methods would beling to the WebServer
 #Naturelly the WebServer would have its own file then
 class WebServer:
-     """Mostly a dummy class representing the webserver; Explained in note above. Contains user messages"""
+    """Mostly a dummy class representing the webserver; Explained in note above. Contains user messages"""
      
     def __init__(self):
         self.msgs=[]
