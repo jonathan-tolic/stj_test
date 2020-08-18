@@ -30,3 +30,6 @@ This is a brief summary and I’d be more than happy to discuss this in more det
 Looking forward to it.
 
 Regards, STJ 
+
+P.S. I've included a rough docker file however python3 and flask are the only requirements, so building a docker might be a bit of an overkill
+
