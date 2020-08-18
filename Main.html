@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style>
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function make_request(){
+            $.ajax({url: "/request/"});
+        }
+        
+        function update() {
+            $.ajax({
+                url: "/update/",
+                success: function( result ) {
+                    $( "#update" ).html( result );
+                }
+            });
+        }
+        
+        document.ready(function(){
+            while (1)
+                setTimeout(update(),1000)
+        })
+    </script>
+  </head>
+  <body>
+        <button onclick="make_request"> Send Request </button>
+        <div id="update"> </div>
+  </body>
+</html>

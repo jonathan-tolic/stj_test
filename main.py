@@ -7,7 +7,10 @@ app = Flask(__name__)
 #What tangled Webs we wove
 @app.route("/", endpoint='hello')
 def hello():
-    return "Hello World!"
+    f= open('Main.html')
+    html = f.read()
+    f.close()
+    return html
 
 @app.route("/update/")
 def update():
