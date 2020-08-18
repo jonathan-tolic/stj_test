@@ -11,10 +11,10 @@ class TestEvents(unittest.TestCase):
         self.assertEqual(EventManager.triggerEvent(TextEventType("REQUEST","BY_THE_POWER_OF_GRAYSKULL")),False)
         EventManager.subscribe("USER_MESSAGE",do_nothing,TextEventType)
         self.assertEqual(EventManager.triggerEvent(UserUpdateEventType("USER_MESSAGE","BY_THE_POWER_OF_GRAYSKULL")),False)
-    
+        EventManager.subscriptions = {}
     def testTrigger(self):
         EventManager.subscribe("USER_MESSAGE",do_nothing,UserUpdateEventType)
-        self.assertEqual(EventManager.triggerEvent(UserUpdateEventType("USER_MESSAGE","BY_THE_POWER_OF_GRAYSKULL")),False)
+        self.assertEqual(EventManager.triggerEvent(UserUpdateEventType("USER_MESSAGE","BY_THE_POWER_OF_GRAYSKULL")),True)
 
 if __name__ == '__main__':
     unittest.main()
